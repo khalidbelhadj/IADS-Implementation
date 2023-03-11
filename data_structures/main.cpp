@@ -1,50 +1,30 @@
 #include <iostream>
 #include "array.cpp"
+#include <string>
 
-// #define CIRC
 
-#ifdef CIRC
-#include "wrap_queue.cpp"
-#else
+#include "circular_queue.cpp"
 #include "linked_list_queue.cpp"
-#endif
 
 int main() {
-    Array<int> a(20);
-    a.print();
-    return 0; 
-}
+    CircularQueue<std::string> xs(4);
 
+    char x[5];
+    x[0] = 'a';
+    x[1] = 'b';
+    x[2] = 'c';
+    char y[5];
+    y[0] = 'd';
+    y[1] = 'e';
+    y[2] = 'f';
 
-int main3() {
-#ifdef CIRC
-    CircularQueue<int> xs(4);
-#else
-    LinkedListQueue<int> xs;
-#endif
-    
-    xs.enqueue(69);
+    xs.enqueue(x);
     xs.print();
-    
-    xs.enqueue(420);
-    xs.print();
-    
-    xs.enqueue(34);
-    xs.print();
-    
-    xs.enqueue(45);
-    xs.print();
-    
+
     xs.dequeue();
     xs.print();
     
     xs.dequeue();
-    xs.print();
-    
-    xs.dequeue();
-    xs.print();
-    
-    xs.enqueue(898);
     xs.print();
 
     xs.dequeue();
@@ -55,5 +35,6 @@ int main3() {
     
     xs.dequeue();
     xs.print();
+    
     return 0;
 }

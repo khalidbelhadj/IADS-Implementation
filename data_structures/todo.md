@@ -6,3 +6,4 @@
 - [ ] Overload the [] operator for lists
 - [ ] Create an iterables class
 - [ ] Define map, filter and fold for iterables
+- [ ] Figure out how to set defaul values

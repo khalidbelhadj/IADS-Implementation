@@ -1,4 +1,7 @@
+#pragma once
+
 #include <stdlib.h>
+
 #include <iostream>
 
 template <typename T>
